@@ -24,6 +24,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -65,8 +72,12 @@ header button {
 }
 
 header button:active {
-    transform: translateY(4px);
+    transform: translateY(4px) scale(0.95);
     box-shadow: 0px 2px 0px var(--accent-shadow);
+}
+
+#tentativas{
+
 }
 
 
@@ -75,17 +86,19 @@ header button:active {
     grid-template-columns: repeat(3, 1fr); 
     gap: 15px;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     background-color: var(--bg-surface);
     padding: 20px;
     border-radius: 12px;
     border: 1px solid rgba(255, 100, 124, 0.2);
+    margin-bottom: 30px;
 }
 
 .grid-container button {
     width: 100%;
     aspect-ratio: 2 / 1; 
     background-color: var(--card-bg);
+    color: var(--accent-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -94,7 +107,11 @@ header button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
+
+
 
 .grid-container button:hover {
     transform: translateY(-3px);
@@ -110,6 +127,42 @@ header button:active {
 .grid-container button img {
     width: 20%;
     height: 60%;
+}
+
+.container-player {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 100, 124, 0.2);
+    justifiy-content: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--bg-surface);
+}
+
+.container-player input {
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 100, 124, 0.2);
+    background-color: var(--card-bg);
+    color: var(--bg-page);
+    font-size: 1rem;
+}
+
+.container-player #btnSalvar {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 100, 124, 0.2);
+    background-color: var(--accent-color);
+    color: var(--bg-page);
+    font-size: 1rem;
+}
+
+.container-player #btnSalvar, .container-player input {
+    height: 44px;
+    padding: 0 15px;
 }
 
 @media (max-width: 480px) {

@@ -10,7 +10,8 @@
 
 <body>
 	<header>
-		<span class="espacamento">Tentativas: 0</span>
+		<span class="espacamento">Tentativas</span>
+		<span id="tentativas"></span>
 		<button id="btnReiniciar">Reiniciar</button>
 	</header>
 	<main class="board">
@@ -23,7 +24,12 @@
 			<button><img src="assets/icon/question-mark.svg"></button>
 			<button><img src="assets/icon/question-mark.svg"></button>
 			<button><img src="assets/icon/question-mark.svg"></button>
-			<button>PALAVRA</button>
+			<button></button>
+		</div>
+
+		<div class="container-player">
+			<input type="text" id="inputPlayer" placeholder="Digite seu nome">
+			<button id="btnSalvar">Salvar</button>
 		</div>
 	</main>
 
